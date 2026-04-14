@@ -1,5 +1,33 @@
 # CnC Red Alert Linux Port Plan
 
+## Development Environment Requirements
+
+To begin porting, set up a Linux development environment with the following tools and libraries:
+
+- **Operating System:**
+  - Ubuntu 20.04+ (or any modern Linux distribution)
+- **Build Tools:**
+  - GCC (g++) or Clang
+  - GNU Make or CMake (recommended)
+  - NASM or GNU Assembler (for porting assembly)
+  - Git
+- **Libraries:**
+  - SDL2 (development headers)
+  - OpenGL (Mesa or proprietary drivers, with dev headers)
+  - ALSA (libasound2-dev) and/or PulseAudio (libpulse-dev)
+- **Debugging/Testing:**
+  - GDB
+  - Valgrind
+  - SDL2 test utilities
+- **Optional:**
+  - Visual Studio Code, CLion, or other C/C++ IDE
+  - Doxygen (for documentation)
+
+Install dependencies using your package manager, e.g.:
+```sh
+sudo apt-get install build-essential cmake git libsdl2-dev libgl1-mesa-dev libasound2-dev libpulse-dev gdb valgrind nasm
+```
+
 ## Overview
 This plan details the steps required to build and run CnC Red Alert on Linux, replacing Windows-specific dependencies with cross-platform alternatives (SDL2/OpenGL/ALSA). The goal is a fully functional port with graphics, audio, and input support.
 
